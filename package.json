@@ -1,0 +1,35 @@
+{
+	"name": "sockopt",
+	"description": "getsockopt & setsockopt for Node.js sockets.",
+	"version": "1.0.0",
+	"main": "index.js",
+	"gypfile": true,
+	"files": [
+		"index.js",
+		"lib",
+		"example.js"
+	],
+	"keywords": [
+		"getsockopt",
+		"setsockopt",
+		"socket"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/node-sockopt",
+	"repository": "derhuerst/node-sockopt",
+	"bugs": "https://github.com/derhuerst/node-sockopt/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=10"
+	},
+	"dependencies": {
+		"bindings": "^1.5.0",
+		"node-addon-api": "^2.0.0"
+	},
+	"devDependencies": {
+	},
+	"scripts": {
+		"test": "node test.js",
+		"prepublishOnly": "npm run install && npm test"
+	}
+}
