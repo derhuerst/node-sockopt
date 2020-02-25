@@ -1,9 +1,13 @@
 language: node_js
-os: linux
+os:
+  - linux
+  - osx
 node_js:
   - 'stable'
   - 'lts/*'
   - '10'
+before_script:
+  - uname -a
 cache: npm
 notifications:
   email:

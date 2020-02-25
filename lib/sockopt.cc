@@ -1,7 +1,7 @@
-#import <napi.h>
-#import <errno.h>
-#import <sys/types.h>
-#import <sys/socket.h>
+#include <napi.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <sys/socket.h>
 
 Napi::Value Getsockopt(const Napi::CallbackInfo& args) {
 	Napi::Env env = args.Env();
