@@ -1,12 +1,13 @@
 {
 	"name": "sockopt",
 	"description": "getsockopt & setsockopt for Node.js sockets.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"main": "index.js",
 	"gypfile": true,
 	"files": [
 		"index.js",
 		"lib",
+		"prebuilds",
 		"example.js"
 	],
 	"keywords": [
@@ -23,13 +24,17 @@
 		"node": ">=10"
 	},
 	"dependencies": {
-		"bindings": "^1.5.0",
-		"node-addon-api": "^2.0.0"
+		"node-addon-api": "^2.0.0",
+		"node-gyp-build": "^4.2.0"
 	},
 	"devDependencies": {
+		"node-gyp": "^6.1.0",
+		"prebuildify": "^3.0.4"
 	},
 	"scripts": {
+		"clean": "rm -rf build prebuilds",
+		"install": "node-gyp-build",
 		"test": "node test.js",
-		"prepublishOnly": "npm run install && npm test"
+		"prepublishOnly": "npm run clean && ./prebuild.sh && npm run install && npm test"
 	}
 }

@@ -3,7 +3,7 @@
 const {
 	getsockopt: _getsockopt,
 	setsockopt: _setsockopt,
-} = require('bindings')('sockopt.node')
+} = require('node-gyp-build')(__dirname)
 
 const fd = (socket) => {
 	if (!socket._handle) {
