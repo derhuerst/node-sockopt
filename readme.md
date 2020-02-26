@@ -41,7 +41,14 @@ SO_SNDBUF is 9216
 SO_SNDBUF is now 1024
 ```
 
-*Note:* **Currently, this package only supports read & writing the flags via *integers*.** You must set boolean flags via `0` (disabled) and `1` (enabled); struct-based flags (e.g. `SO_SNDTIMEO`) won't work.
+### ceveat: integer-based flags only
+
+*Note:* **Currently, this package only supports read & writing the flags via *integers*.**
+
+Set boolean flags (`SO_BROADCAST`) via `0` (disabled) and `1` (enabled), or `+false` and `+true` to be more explicit. Due to how the [`getsockopt` syscall](https://linux.die.net/man/3/getsockopt) works, `0` will be returned for "disabled", and non-`0` for "enabled".
+
+Struct-based flags (e.g. `SO_SNDTIMEO`) *do not* work yet.
+
 
 ## Related
 
