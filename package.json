@@ -1,11 +1,12 @@
 {
 	"name": "sockopt",
 	"description": "getsockopt & setsockopt for Node.js sockets.",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"main": "index.js",
 	"gypfile": true,
 	"files": [
 		"index.js",
+		"binding.gyp",
 		"lib",
 		"prebuilds",
 		"example.js"
