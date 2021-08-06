@@ -29,7 +29,7 @@
 		"node-gyp-build": "^4.2.0"
 	},
 	"devDependencies": {
-		"node-gyp": "^6.1.0",
+		"node-gyp": "^7.0.0",
 		"prebuildify": "^3.0.4"
 	},
 	"scripts": {
