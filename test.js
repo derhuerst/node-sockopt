@@ -10,12 +10,12 @@ const SO_SNDBUF = 0x1001
 
 const socket = createSocket({type: 'udp6'})
 
-socket.bind(12345, '::', (err) => {
-	if (err) {
-		console.error(err)
-		process.exit(1)
-	}
+socket.on('error', (err) => {
+	console.error(err)
+	process.exit(1)
+})
 
+socket.bind(12345, '::', () => {
 	const reusePort = !!getsockopt(socket, SOL_SOCKET, SO_REUSEADDR)
 	eql(reusePort, false, 'precondition failed: SO_REUSEADDR is not false')
 

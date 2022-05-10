@@ -13,12 +13,12 @@ const SO_SNDBUF = 0x1001
 
 const socket = createSocket({type: 'udp4'})
 
-socket.bind(1234, '0.0.0.0', (err) => {
-	if (err) {
-		console.error(err)
-		process.exit(1)
-	}
+socket.on('error', (err) => {
+	console.error(err)
+	process.exit(1)
+})
 
+socket.bind(1234, '0.0.0.0', () => {
 	console.log('SO_REUSEADDR is', !!getsockopt(socket, SOL_SOCKET, SO_REUSEADDR))
 	setsockopt(socket, SOL_SOCKET, SO_REUSEADDR, +true) // pass `1` for true
 	console.log('SO_REUSEADDR is now', !!getsockopt(socket, SOL_SOCKET, SO_REUSEADDR))
