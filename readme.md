@@ -5,7 +5,6 @@
 Allows you to set all the socket flags that Node does not expose via its built-in [UDP](https://nodejs.org/api/dgram.html#dgram_class_dgram_socket) & [TCP](https://nodejs.org/api/net.html#net_class_net_socket) socket APIs.
 
 [![npm version](https://img.shields.io/npm/v/sockopt.svg)](https://www.npmjs.com/package/sockopt)
-[![build status](https://api.travis-ci.org/derhuerst/node-sockopt.svg?branch=master)](https://travis-ci.org/derhuerst/node-sockopt)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/node-sockopt.svg)
 ![minimum Node.js version](https://img.shields.io/node/v/sockopt.svg)
 [![support me via GitHub Sponsors](https://img.shields.io/badge/support%20me-donate-fa7664.svg)](https://github.com/sponsors/derhuerst)
