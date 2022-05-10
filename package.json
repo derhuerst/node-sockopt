@@ -1,7 +1,7 @@
 {
 	"name": "sockopt",
 	"description": "getsockopt & setsockopt for Node.js sockets.",
-	"version": "1.0.5",
+	"version": "2.0.0",
 	"main": "index.js",
 	"gypfile": true,
 	"files": [
