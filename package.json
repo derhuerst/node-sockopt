@@ -29,13 +29,15 @@
 		"node-gyp-build": "^4.2.0"
 	},
 	"devDependencies": {
+		"eslint": "^8.15.0",
 		"node-gyp": "^9.0.0",
 		"prebuildify": "^5.0.0"
 	},
 	"scripts": {
+		"lint": "eslint .",
 		"clean": "rm -rf build prebuilds",
 		"install": "node-gyp-build",
 		"test": "node test.js",
-		"prepublishOnly": "npm run clean && ./prebuild.sh && npm run install && npm test"
+		"prepublishOnly": "npm run lint && npm run clean && ./prebuild.sh && npm run install && npm test"
 	}
 }
