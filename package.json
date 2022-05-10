@@ -22,15 +22,15 @@
 	"bugs": "https://github.com/derhuerst/node-sockopt/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=10"
+		"node": ">=18"
 	},
 	"dependencies": {
-		"node-addon-api": "^2.0.0",
+		"node-addon-api": "^5.0.0",
 		"node-gyp-build": "^4.2.0"
 	},
 	"devDependencies": {
-		"node-gyp": "^6.1.0",
-		"prebuildify": "^3.0.4"
+		"node-gyp": "^9.0.0",
+		"prebuildify": "^5.0.0"
 	},
 	"scripts": {
 		"clean": "rm -rf build prebuilds",
